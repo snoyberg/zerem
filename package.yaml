@@ -1,0 +1,53 @@
+name:                zerem
+version:             0.1.0.0
+github:              snoyberg/zerem
+license:             MIT
+author:              Michael Snoyman
+maintainer:          michael@snoyman.com
+copyright:           2018 Michael Snoyman
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+synopsis:            Streaming library optimized for low CPU and GC overhead*
+category:            Data, Zerem
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/snoyberg/zerem#readme>
+
+dependencies:
+- base >= 4.10 && < 5
+
+library:
+  source-dirs: src
+  ghc-options:
+  - -O2
+
+tests:
+  spec:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - hspec
+    - zerem
+
+benchmarks:
+  bench:
+    main:                bench.hs
+    source-dirs:         bench
+    ghc-options:
+    - -O2
+    - -threaded
+    - -rtsopts
+    dependencies:
+    - gauge
+    - vector
+    - zerem

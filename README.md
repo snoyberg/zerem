@@ -1,5 +1,8 @@
 # zerem
 
+[![Travis build Status](https://travis-ci.org/snoyberg/zerem.svg?branch=master)](https://travis-ci.org/snoyberg/zerem)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/t56wfu6hgkcgw4mw/branch/master?svg=true)](https://ci.appveyor.com/project/snoyberg/zerem/branch/master)
+
 *Haskell streaming library optimized for low CPU and GC overhead*
 
 ## Motivation
@@ -74,3 +77,7 @@ ideas are:
 
 Feel free to open issues on Github, or [discuss on
 Gitter](https://gitter.im/commercialhaskell/commercialhaskell).
+
+## Usage
+
+Feel free to contribute some actual information on how to use this library!
