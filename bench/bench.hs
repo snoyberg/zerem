@@ -9,7 +9,7 @@ main :: IO ()
 main = defaultMain
   [ bgroup "sum" $
     let bench' name f = bench name $ whnf f (100000 :: Int) in
-    [ bench "zerem Identity" $ \high ->
+    [ bench' "zerem Identity" $ \high ->
         runIdentity $ Z.sum $ Z.enumFromTo 1 high
     , bench' "zerem ST" $ \high ->
         runST $ Z.sum $ Z.enumFromTo 1 high
