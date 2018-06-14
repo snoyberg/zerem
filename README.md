@@ -34,7 +34,7 @@ Conduit). Additionally, since it is not primarily designed from streaming data,
 some idioms, like `mapM foo >=> mapM bar`, do not fuse at all, and therefore
 force buffer allocations.
 
-These topics are covered in more detail in my blog post from 2014, [First class
+These topics are covered in more detail in my blog post from 2016, [First class
 stream
 fusion](https://www.yesodweb.com/blog/2016/02/first-class-stream-fusion).
 
