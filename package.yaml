@@ -52,5 +52,6 @@ benchmarks:
     - gauge
     - pipes
     - streamly
+    - streaming
     - vector
     - zerem
