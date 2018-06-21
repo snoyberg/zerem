@@ -4,6 +4,7 @@ import Gauge
 import Data.List (foldl')
 import qualified Data.Vector as VB
 import qualified Data.Vector.Unboxed as VU
+import qualified Streaming.Prelude as Streaming
 import qualified Streamly
 import qualified Streamly.Prelude as Streamly
 import qualified Pipes
@@ -32,5 +33,8 @@ main = defaultMain
         runIdentity
           $ Streamly.foldl (+) 0 id
           $ (Streamly.each [1..high] :: Streamly.StreamT Identity Int)
+    , bench' "streaming" $ \high ->
+        runIdentity
+          $ Streaming.sum (Streaming.each [1..high])
     ]
   ]
