@@ -1,1 +1,4 @@
 resolver: lts-11.10
+extra-deps:
+# Include fusion framework fixes
+- conduit-1.3.0.3@rev:0
