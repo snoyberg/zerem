@@ -48,6 +48,9 @@ benchmarks:
     - -threaded
     - -rtsopts
     dependencies:
+    - conduit
     - gauge
+    - pipes
+    - streamly
     - vector
     - zerem
